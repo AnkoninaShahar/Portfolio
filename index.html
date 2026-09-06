@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahar Ankonina — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="blueprint-stamp">
+        <div class="stamp-cell cell-company">Ankonina Inc.</div>
+        <div class="stamp-cell cell-title">SOFTWARE ENGINEERING PORTFOLIO</div>
+        <div class="stamp-cell cell-author">ENG: Shahar Ankonina</div>
+        <div class="stamp-cell cell-status">STATUS: ACTIVE</div>
+        <div class="stamp-cell cell-scale">SCALE: 1:1</div>
+        <div class="stamp-cell cell-date">DATE: 2026</div>
+    </div>
+
+    <canvas id="blueprint-canvas"></canvas>
+
+    <!-- Background Blueprint Grid -->
+    <div class="grid-background"></div>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                <span>Available for opportunities</span>
+            </div>
+            <div class="hero-links">
+                <a href="https://github.com/AnkoninaShahar" target="_blank">GitHub</a>
+                <a href="mailto:shahar.ankonina05@gmail.com">Email</a>
+                <a href="#projects">Explore Work ↓</a>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">System Profile</h2>
+            <div class="blueprint-dossier">
+                <div class="dossier-header">
+                    <span>DOC_ID: PROFILE_00</span>
+                    <span>CLASSIFICATION: OPERATOR_SPEC</span>
+                </div>
+                <div class="dossier-grid">
+                    <div class="dossier-image-col">
+                        <div class="drafting-frame">
+                            <img src="images/profile.png" alt="Operator Portrait" class="profile-img">
+                            <span class="profile-caption">FIG 0.1: OPERATOR</span>
+                        </div>
+                    </div>
+                    <div class="dossier-text-col">
+                        <span class="dossier-tag">00 // Core Architecture</span>
+                        <h3>Engineering Overview</h3>
+                        <p class="dossier-text">I'm a software engineering student who loves figuring out how complex systems work under the hood. I specialize in building low-level architecture and machine learning models entirely from first principles. Whether I'm writing core logic in C++ and Python, or building out interfaces with React and TypeScript, my focus is always on engineering clean, transparent, and highly optimized software.</p>
+                    </div>
+                    <div class="dossier-bottom-col">
+                        <p class="dossier-text" style="margin-bottom: 0;">My recent work includes CGPT++, a custom language model and tensor library engineered in pure C++ without any external ML dependencies, and an intelligent Weather Agent orchestrated with LangGraph. I'm currently studying Computer Engineering at De Anza College, targeting a 2027 university transfer, and I am always looking for the next challenging engineering problem to tackle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Featured Work</h2>
+            
+            <!-- Project 1: CGPT++ -->
+            <article class="project-card featured">
+                <div class="project-header">
+                    <span class="project-tag">01 // Systems & AI</span>
+                    <div class="tech-stack">
+                        <span>C++</span>
+                        <span>Transformers</span>
+                        <span>Low-Level</span>
+                    </div>
+                </div>
+                <h3>CGPT++</h3>
+                <p class="project-desc">A nanoGPT implementation written entirely from scratch in C++. Deep-dive systems engineering exploring tensor operations, memory management, and raw transformer architecture without high-level ML frameworks.</p>
+                <a href="https://github.com/AnkoninaShahar/CGPT" target="_blank" class="project-link">View Repository →</a>
+            </article>
+
+            <!-- Project 2: qapinn-thermo-optic -->
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-tag">02 // Scientific Computing</span>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>C++</span>
+                        <span>Optics Simulation</span>
+                    </div>
+                </div>
+                <h3>Qapinn Thermo Optic</h3>
+                <p class="project-desc">Engineered a thermo-optic phase shifter model using Quantum-Assisted PINNs (PyTorch, PennyLane) to solve static and transient heat equations. By replacing classical neural layers with a two-qubit variational quantum circuit, the research utilizes Fourier analysis and heatmaps to mathematically explain how entanglement impacts parameter efficiency and physical accuracy in photonic device simulations.</p>
+                <a href="https://github.com/AnkoninaShahar/qapinn-thermo-optic" target="_blank" class="project-link">View Repository →</a>
+            </article>
+
+            <!-- Project 3: Sales-Tracker-Sleek -->
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-tag">03 // Product Engineering</span>
+                    <div class="tech-stack">
+                        <span>Frontend</span>
+                        <span>UI/UX</span>
+                        <span>State Management</span>
+                    </div>
+                </div>
+                <h3>Sales Tracker</h3>
+                <p class="project-desc">A production-ready, frictionless web application designed to turn messy transactional metrics into an intuitive, high-performance user experience.</p>
+                <a href="https://github.com/AnkoninaShahar/Sales-Tracker-Sleek" target="_blank" class="project-link">View Repository →</a>
+            </article>
+        </section>
+
+        <!-- Skills Section: Technical Specification Table -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Technical Stack</h2>
+            <div class="blueprint-specs">
+                <div class="spec-row">
+                    <span class="spec-label">LANGUAGES</span>
+                    <div class="spec-content icon-grid">
+                        <span title="C++"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                        <span title="C#"><i class="devicon-csharp-plain colored"></i> C#</span>
+                        <span title="Java"><i class="devicon-java-plain colored"></i> Java</span>
+                        <span title="Python"><i class="devicon-python-plain colored"></i> Python</span>
+                        <span title="Assembly"><i class="devicon-wasm-original colored"></i> Assembly (x86)</span>
+                        <span title="JavaScript"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                        <span title="TypeScript"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                        <span title="HTML5"><i class="devicon-html5-plain colored"></i> HTML</span>
+                        <span title="CSS3"><i class="devicon-css3-plain colored"></i> CSS</span>
+                    </div>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">FRAMEWORKS & LIBS</span>
+                    <div class="spec-content icon-grid">
+                        <span title="PyTorch"><i class="devicon-pytorch-original colored"></i> PyTorch</span>
+                        <span title="LangGraph"><i class="devicon-python-plain colored" style="filter: hue-rotate(180deg);"></i> LangGraph</span>
+                        <span title="PennyLane"><i class="devicon-python-plain colored" style="filter: hue-rotate(90deg);"></i> PennyLane</span>
+                        <span title="React"><i class="devicon-react-original colored"></i> React</span>
+                        <span title="SFML"><i class="devicon-cplusplus-line"></i>SFML</span>
+                        <span title="Pygame"><i class="devicon-python-plain colored" style="filter: hue-rotate(20deg);"></i>Pygame</span>
+                        <span title="Discord API"><i class="devicon-python-plain colored" style="filter: hue-rotate(200deg);"></i>Discord</span>
+                        <span title="yt-dlp"><i class="devicon-python-plain colored" style="filter: hue-rotate(-60deg);"></i>yt-dlp</span>
+                    </div>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">TOOLS & SYSTEMS</span>
+                    <div class="spec-content icon-grid">
+                        <span title="Git"><i class="devicon-git-plain colored"></i> Git</span>
+                        <span title="GitHub"><i class="devicon-github-original"></i> GitHub</span>
+                        <span title="VS Code"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                        <span title="Visual Studio"><i class="devicon-visualstudio-plain colored"></i> Visual Studio</span>
+                        <span title="Unity"><i class="devicon-unity-plain"></i> Unity</span>
+                    </div>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">CORE CONCEPTS</span>
+                    <div class="spec-content" style="font-size: 1rem; color: rgba(255, 255, 255, 0.9);">
+                        Data Structures & Algorithms, OOP, Machine Learning & AI, Physics Simulation, Quantum Computing, Debugging & Testing
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education: Architectural Revision Log -->
+        <section id="experience" class="experience-section">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="revision-log">
+                <div class="log-item">
+                    <div class="log-meta">
+                    <span class="log-id">REV 01</span>
+                    <span class="log-date">EXPECTED JUNE 2027</span>
+                    </div>
+                    <div class="log-body">
+                        <h3>Associate of Science in Computer Engineering — De Anza College</h3>
+                        <p>[4.0 GPA] Dean's List</p>
+                        <p>Relevant Coursework:</p> 
+                        <ul style="margin-left: 50px">
+                            <li>Programming: C++, Java, x86 Assembly, Data Structures & Algorithms</li>
+                            <li>Math: Calculus (Differential, Integral, Vector, & Multivariable), Differential Equations, Linear Algebra, Discrete Mathematics</li> 
+                            <li>Physics: Mechanics, Thermodynamics, Waves, Optics</li> 
+                        </ul>
+                        <p>Planned transfer for a Bachelor's in Computer Engineering / Computer Science</p>
+                    </div>
+                </div>
+                <div class="log-item">
+                    <div class="log-meta">
+                    <span class="log-id">REV 02</span>
+                    <span class="log-date">LEADERSHIP & INVOLVEMENT</span>
+                    </div>
+                    <div class="log-body">
+                        <h3>Extra Curricular Activities</h3>
+                        <p>• Technical Lead of the Circuits and Systems (CAS) Society @ Foothill IEEE student branch</p>
+                        <p>• Active member of the Engineering Club, Robotics Club, Rocketry Club, and Data Science & AI Club @ De Anza & Foothill</p> 
+                        <p>• Participated in the GMTK Game Jam 2021 (built a Unity game in 72 hours)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section: Technical Transmission Node -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Information</h2>
+            <div class="transmission-node">
+                <div class="node-header">TRANSMISSION // OPEN CHANNELS</div>
+                <p class="project-desc">Open for software engineering opportunities, technical discussions, and collaborative systems projects!</p>
+                <div class="hero-links">
+                    <a href="mailto:shahar.ankonina05@gmail.com">Email Direct →</a>
+                    <a href="https://www.linkedin.com/in/shahar-ankonina/" target="_blank">LinkedIn →</a>
+                    <a href="https://github.com/AnkoninaShahar" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Shahar Ankonina. Built with vanilla HTML, CSS, and JS.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
