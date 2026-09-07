@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastY = null;
   const paths = [];
 
-  // Draw continuously on mouse movement without requiring a click
   window.addEventListener("mousemove", (e) => {
     if (lastX === null) {
       lastX = e.clientX;
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     [lastX, lastY] = [e.clientX, e.clientY];
   });
 
-  // Reset coordinates when the mouse leaves the window to prevent drawing a straight line across the screen upon return
   document.addEventListener("mouseleave", () => {
     lastX = null;
     lastY = null;
@@ -42,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let i = paths.length - 1; i >= 0; i--) {
-      let p = paths[i];
+      const p = paths[i];
       ctx.beginPath();
       ctx.moveTo(p.x1, p.y1);
       ctx.lineTo(p.x2, p.y2);
-      ctx.strokeStyle = `rgb(255, 255, 255)`;
+      ctx.strokeStyle = "rgb(255, 255, 255)";
       ctx.lineWidth = 1;
       ctx.lineCap = "round";
       ctx.stroke();
@@ -62,30 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animate();
 
-  // --- Scroll Reveal Observer ---
-
-  // 1. Select all the major structural elements on the page
+  /* IntersectionObserver Scroll Reveal */
   const animatedElements = document.querySelectorAll(
-    ".section-title, .project-card, .blueprint-dossier, .blueprint-specs, .revision-log, .transmission-node",
+    ".section-title, .project-card, .blueprint-dossier, .blueprint-specs, .revision-log, .transmission-node, .contributions-container",
   );
 
-  // 2. Apply the starting hidden state to all of them
   animatedElements.forEach((el) => el.classList.add("reveal"));
 
-  // 3. Configure the observer (triggers when 15% of the element enters the screen)
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.6,
+    threshold: 0.15,
   };
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Element is on screen, trigger the animation
         entry.target.classList.add("visible");
       } else if (entry.boundingClientRect.top > 0) {
-        // Element has left the screen, reset the state
         entry.target.classList.remove("visible");
       }
     });
@@ -94,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedElements.forEach((el) => revealObserver.observe(el));
 });
 
-// Reset to top of page when reloaded
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
