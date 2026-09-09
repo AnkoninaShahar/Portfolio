@@ -4,17 +4,6 @@ body {
   overscroll-behavior: none;
 }
 
-/* Force canvas to consume touch gestures at screen edges */
-#blueprint-canvas {
-  touch-action: none;
-  height: 100dvh; /* Dynamic viewport units prevent URL bar jump */
-}
-
-/* Keep grid background anchored to dynamic viewport */
-.grid-background {
-  height: 100dvh;
-}
-
 /* General Settings */
 *,
 *::before,
