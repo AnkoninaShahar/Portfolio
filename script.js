@@ -2,11 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("blueprint-canvas");
   const ctx = canvas.getContext("2d");
 
+  // Track initial width
+  let currentWidth = window.innerWidth;
+
   function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Only resize if the width changes, ignoring height shifts from mobile address bars
+    if (window.innerWidth !== currentWidth || canvas.width === 0) {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      currentWidth = window.innerWidth;
+    }
   }
-  resizeCanvas();
+
+  // Set initial dimensions
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
   window.addEventListener("resize", resizeCanvas);
 
   let lastX = null;
