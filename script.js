@@ -13,25 +13,58 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastY = null;
   const paths = [];
 
-  window.addEventListener("mousemove", (e) => {
+  function addPoint(x, y) {
     if (lastX === null) {
-      lastX = e.clientX;
-      lastY = e.clientY;
+      lastX = x;
+      lastY = y;
       return;
     }
 
     paths.push({
       x1: lastX,
       y1: lastY,
-      x2: e.clientX,
-      y2: e.clientY,
+      x2: x,
+      y2: y,
       time: 15.0,
     });
 
-    [lastX, lastY] = [e.clientX, e.clientY];
+    lastX = x;
+    lastY = y;
+  }
+
+  /* Mouse Drawing Events */
+  window.addEventListener("mousemove", (e) => {
+    addPoint(e.clientX, e.clientY);
   });
 
   document.addEventListener("mouseleave", () => {
+    lastX = null;
+    lastY = null;
+  });
+
+  /* Touch / Mobile Finger Drawing Events */
+  window.addEventListener(
+    "touchstart",
+    (e) => {
+      if (e.touches.length > 0) {
+        lastX = e.touches[0].clientX;
+        lastY = e.touches[0].clientY;
+      }
+    },
+    { passive: true },
+  );
+
+  window.addEventListener(
+    "touchmove",
+    (e) => {
+      if (e.touches.length > 0) {
+        addPoint(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    },
+    { passive: true },
+  );
+
+  window.addEventListener("touchend", () => {
     lastX = null;
     lastY = null;
   });

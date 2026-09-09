@@ -7,6 +7,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
 :root {
   --bg-color: rgb(37, 54, 88);
   --card-bg: #0f141f;
@@ -39,6 +47,8 @@ body::before {
   border: 3px solid rgb(255, 255, 255);
   pointer-events: none;
   z-index: 999;
+  transform: translateZ(999px);
+  -webkit-transform: translateZ(999px);
 }
 
 body::after {
@@ -50,6 +60,8 @@ body::after {
   height: 100%;
   pointer-events: none;
   z-index: 998;
+  transform: translateZ(998px);
+  -webkit-transform: translateZ(998px);
   background-color: var(--bg-color);
   background-image:
     linear-gradient(to right, rgba(56, 189, 248, 0.14) 2px, transparent 1px),
@@ -135,6 +147,8 @@ body::after {
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
   pointer-events: auto;
   z-index: 1000;
+  transform: translateZ(1000px);
+  -webkit-transform: translateZ(1000px);
 }
 
 .stamp-cell {
@@ -644,56 +658,6 @@ body::after {
   overflow-x: auto;
 }
 
-/* Contributions Chart */
-.contributions-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 100px;
-  padding: 28px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: solid rgba(255, 255, 255, 0.7);
-  border-width: 3px 1px 2px 4px;
-  border-radius: 15px 4px 12px 5px / 6px 14px 5px 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.contributions-container::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -5px;
-  right: -2px;
-  bottom: -4px;
-  border: 1px dashed rgba(255, 255, 255, 0.35);
-  border-radius: 5px 15px 8px 18px / 18px 8px 15px 5px;
-  transform: rotate(-0.8deg);
-  pointer-events: none;
-}
-
-.contributions-container::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -1px;
-  right: -6px;
-  bottom: -3px;
-  border: 1px dotted rgba(255, 255, 255, 0.25);
-  border-radius: 18px 6px 20px 8px / 8px 20px 6px 18px;
-  transform: rotate(1deg);
-  pointer-events: none;
-}
-
-.contributions-chart {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: invert(0.92) hue-rotate(180deg);
-}
-
 /* Skills Specs */
 .blueprint-specs {
   position: relative;
@@ -762,7 +726,7 @@ body::after {
   color: rgba(255, 255, 255, 0.9);
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .icon-grid {
@@ -803,6 +767,56 @@ body::after {
 }
 .hue-rotate-neg60 {
   filter: hue-rotate(-60deg);
+}
+
+/* Contributions Chart */
+.contributions-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 100px;
+  padding: 28px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid rgba(255, 255, 255, 0.7);
+  border-width: 3px 1px 2px 4px;
+  border-radius: 15px 4px 12px 5px / 6px 14px 5px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contributions-container::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -5px;
+  right: -2px;
+  bottom: -4px;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 5px 15px 8px 18px / 18px 8px 15px 5px;
+  transform: rotate(-0.8deg);
+  pointer-events: none;
+}
+
+.contributions-container::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -1px;
+  right: -6px;
+  bottom: -3px;
+  border: 1px dotted rgba(255, 255, 255, 0.25);
+  border-radius: 18px 6px 20px 8px / 8px 20px 6px 18px;
+  transform: rotate(1deg);
+  pointer-events: none;
+}
+
+.contributions-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: invert(0.92) hue-rotate(180deg);
 }
 
 /* Experience & Education */
