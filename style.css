@@ -1,7 +1,7 @@
 /* Prevent native mobile rubber-banding and edge bounce */
 html,
 body {
-  overscroll-behavior: none;
+  overscroll-behavior: auto;
 }
 
 /* General Settings */
@@ -61,7 +61,8 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  height: 100dvh;
   background-image:
     linear-gradient(to right, rgba(56, 189, 248, 0.14) 2px, transparent 1px),
     linear-gradient(to bottom, rgba(56, 189, 248, 0.14) 2px, transparent 1px),
@@ -80,9 +81,10 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  height: 100dvh;
   z-index: 0;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .container {
