@@ -28,12 +28,6 @@ The portfolio features a custom HTML5 canvas cursor engine that draws live draft
 - *Fonts & Icons:* Devicon, Google Fonts (`Patrick Hand`, `Share Tech`)
 - *Tools & Platforms:* Git/GitHub, VS Code, GitHub Pages
 
-### Why Vanilla Web Stack (not React / Frameworks)
-Building the portfolio using raw browser standards ensures direct control over render loops and performance:
-- *Performance:* Zero bundle size, zero virtual DOM overhead, and instantaneous page load times.
-- *Direct Canvas Integration:* Direct access to the native HTML5 `<canvas>` 2D rendering context without framework lifecycle hooks.
-- *First-Principles Demonstration:* Showcases mastery over fundamental CSS Grid/Flexbox layouts, DOM manipulation, keyframe physics, and event loop listeners.
-
 ---
 ## Usage
 - This is a static web application with no build steps or package installations required.
@@ -55,19 +49,5 @@ open index.html
 # Windows (CMD)
 start index.html
 ```
-
-### Preview Structure
-```
-+------------------------------------------------------------------+
-| ANKONINA INC.  | PORTFOLIO  | ENG: Shahar Ankonina | SCALE: 1:1  |
-+------------------------------------------------------------------+
-|                                                                  |
-|   [STATUS: AVAILABLE]                                            |
-|   System Profile // CORE ARCHITECTURE                            |
-|   ==============================================                 |
-|   FIG 0.1 OPERATOR | Engineering Overview                        |
-|   [PROFILE IMG]    | Software Engineering Student                |
-|                    | C++, Python, ML, Low-Level Architecture     |
-|                                                                  |
-+------------------------------------------------------------------+
-```
+### Preview
+<img width="1905" height="955" alt="image" src="https://github.com/user-attachments/assets/945380a5-1c4b-463d-8f6a-270eec16d412" />
