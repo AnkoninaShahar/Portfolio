@@ -1,3 +1,12 @@
+@keyframes syncFrame {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 /* General Settings */
 *,
 *::before,
@@ -43,14 +52,16 @@ body {
 /* Crisp architectural white outer frame */
 body::before {
   content: "";
+
   position: fixed;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border: 3px solid rgb(255, 255, 255);
+  inset: 12px;
+  border: 3px solid #ffffff;
   pointer-events: none;
   z-index: 999;
+
+  /* Binds frame recalculation directly to the active scroll timeline */
+  animation: syncFrame linear auto;
+  animation-timeline: scroll(root block);
 }
 
 body::after {
