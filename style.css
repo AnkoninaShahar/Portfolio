@@ -1,9 +1,13 @@
-@keyframes syncFrame {
-  0% {
-    transform: translate3d(0, 0, 0);
+@media (max-width: 768px), (pointer: coarse) {
+  body::before,
+  .site-frame,
+  .mobile-frame {
+    display: none !important;
   }
-  100% {
-    transform: translate3d(0, 0, 0);
+
+  /* Reset layout margins so content spans full width cleanly on phones */
+  body {
+    padding-top: 12px;
   }
 }
 
@@ -52,16 +56,14 @@ body {
 /* Crisp architectural white outer frame */
 body::before {
   content: "";
-
   position: fixed;
-  inset: 12px;
-  border: 3px solid #ffffff;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 3px solid rgb(255, 255, 255);
   pointer-events: none;
   z-index: 999;
-
-  /* Binds frame recalculation directly to the active scroll timeline */
-  animation: syncFrame linear auto;
-  animation-timeline: scroll(root block);
 }
 
 body::after {
