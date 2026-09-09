@@ -644,6 +644,56 @@ body::after {
   overflow-x: auto;
 }
 
+/* Contributions Chart */
+.contributions-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 100px;
+  padding: 28px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid rgba(255, 255, 255, 0.7);
+  border-width: 3px 1px 2px 4px;
+  border-radius: 15px 4px 12px 5px / 6px 14px 5px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contributions-container::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -5px;
+  right: -2px;
+  bottom: -4px;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 5px 15px 8px 18px / 18px 8px 15px 5px;
+  transform: rotate(-0.8deg);
+  pointer-events: none;
+}
+
+.contributions-container::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -1px;
+  right: -6px;
+  bottom: -3px;
+  border: 1px dotted rgba(255, 255, 255, 0.25);
+  border-radius: 18px 6px 20px 8px / 8px 20px 6px 18px;
+  transform: rotate(1deg);
+  pointer-events: none;
+}
+
+.contributions-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: invert(0.92) hue-rotate(180deg);
+}
+
 /* Skills Specs */
 .blueprint-specs {
   position: relative;
@@ -755,12 +805,12 @@ body::after {
   filter: hue-rotate(-60deg);
 }
 
-/* Revision Log */
+/* Experience & Education */
 .revision-log {
   border-left: 2px dashed rgba(56, 189, 248, 0.5);
   margin-left: 12px;
   padding-left: 24px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -807,56 +857,6 @@ body::after {
   margin-left: 2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-/* Contributions Chart */
-.contributions-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 200px;
-  padding: 28px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: solid rgba(255, 255, 255, 0.7);
-  border-width: 3px 1px 2px 4px;
-  border-radius: 15px 4px 12px 5px / 6px 14px 5px 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.contributions-container::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -5px;
-  right: -2px;
-  bottom: -4px;
-  border: 1px dashed rgba(255, 255, 255, 0.35);
-  border-radius: 5px 15px 8px 18px / 18px 8px 15px 5px;
-  transform: rotate(-0.8deg);
-  pointer-events: none;
-}
-
-.contributions-container::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -1px;
-  right: -6px;
-  bottom: -3px;
-  border: 1px dotted rgba(255, 255, 255, 0.25);
-  border-radius: 18px 6px 20px 8px / 8px 20px 6px 18px;
-  transform: rotate(1deg);
-  pointer-events: none;
-}
-
-.contributions-chart {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: invert(0.92) hue-rotate(180deg);
 }
 
 /* Contact & Transmission Node */
