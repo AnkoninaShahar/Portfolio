@@ -1,13 +1,26 @@
+/* Mobile View */
 @media (max-width: 768px), (pointer: coarse) {
-  body::before,
-  .site-frame,
-  .mobile-frame {
+  /* Completely disable the frame line and stamp */
+  .blueprint-stamp,
+  body::before {
     display: none !important;
   }
 
-  /* Reset layout margins so content spans full width cleanly on phones */
+  /* Remove cutt-off */
+  body::after {
+    z-index: 0 !important;
+  }
+
+  /* Remove outer frame offsets on the body */
   body {
-    padding-top: 12px;
+    padding-top: 0 !important;
+  }
+
+  /* Reset layout padding so content spans edge-to-edge naturally */
+  .container {
+    padding-top: 24px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
@@ -40,10 +53,6 @@ section[id] {
 }
 
 body {
-  position: absolute;
-  height: 100vh;
-  height: 100svh;
-
   background-color: var(--bg-color);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -204,12 +213,6 @@ body::after {
 .cell-date {
   grid-column: 2 / 4;
   grid-row: 4;
-}
-
-@media (max-width: 424px) {
-  .blueprint-stamp {
-    display: none;
-  }
 }
 
 /* Status Badge & Hero */
@@ -830,7 +833,7 @@ body::after {
   filter: invert(0.92) hue-rotate(180deg);
 }
 
-/* Revision Log */
+/* Experience & Education */
 .revision-log {
   border-left: 2px dashed rgba(56, 189, 248, 0.5);
   margin-left: 12px;
