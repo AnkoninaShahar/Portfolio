@@ -2,50 +2,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("blueprint-canvas");
   const ctx = canvas.getContext("2d");
 
-  // Track initial width
-  let currentWidth = window.innerWidth;
-
   function resizeCanvas() {
-    // Only resize if the width changes, ignoring height shifts from mobile address bars
-    if (window.innerWidth !== currentWidth || canvas.width === 0) {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      currentWidth = window.innerWidth;
-    }
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
   }
-
-  // Set initial dimensions
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
+  resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
 
   let lastX = null;
   let lastY = null;
   const paths = [];
 
-  function addPoint(x, y) {
+  window.addEventListener("mousemove", (e) => {
     if (lastX === null) {
-      lastX = x;
-      lastY = y;
+      lastX = e.clientX;
+      lastY = e.clientY;
       return;
     }
 
     paths.push({
       x1: lastX,
       y1: lastY,
-      x2: x,
-      y2: y,
+      x2: e.clientX,
+      y2: e.clientY,
       time: 15.0,
     });
 
-    lastX = x;
-    lastY = y;
-  }
-
-  /* Mouse Drawing Events */
-  window.addEventListener("mousemove", (e) => {
-    addPoint(e.clientX, e.clientY);
+    [lastX, lastY] = [e.clientX, e.clientY];
   });
 
   document.addEventListener("mouseleave", () => {
