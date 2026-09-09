@@ -55,19 +55,5 @@ open index.html
 # Windows (CMD)
 start index.html
 ```
-
-### Preview Structure
-```
-+------------------------------------------------------------------+
-| ANKONINA INC.  | PORTFOLIO  | ENG: Shahar Ankonina | SCALE: 1:1  |
-+------------------------------------------------------------------+
-|                                                                  |
-|   [STATUS: AVAILABLE]                                            |
-|   System Profile // CORE ARCHITECTURE                            |
-|   ==============================================                 |
-|   FIG 0.1 OPERATOR | Engineering Overview                        |
-|   [PROFILE IMG]    | Software Engineering Student                |
-|                    | C++, Python, ML, Low-Level Architecture     |
-|                                                                  |
-+------------------------------------------------------------------+
-```
+### Preview
+<img width="1905" height="955" alt="image" src="https://github.com/user-attachments/assets/945380a5-1c4b-463d-8f6a-270eec16d412" />
