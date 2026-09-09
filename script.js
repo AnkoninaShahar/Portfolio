@@ -42,33 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lastY = null;
   });
 
-  /* Touch / Mobile Finger Drawing Events */
-  window.addEventListener(
-    "touchstart",
-    (e) => {
-      if (e.touches.length > 0) {
-        lastX = e.touches[0].clientX;
-        lastY = e.touches[0].clientY;
-      }
-    },
-    { passive: true },
-  );
-
-  window.addEventListener(
-    "touchmove",
-    (e) => {
-      if (e.touches.length > 0) {
-        addPoint(e.touches[0].clientX, e.touches[0].clientY);
-      }
-    },
-    { passive: true },
-  );
-
-  window.addEventListener("touchend", () => {
-    lastX = null;
-    lastY = null;
-  });
-
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
